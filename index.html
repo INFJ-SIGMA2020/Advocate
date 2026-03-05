@@ -126,6 +126,11 @@ color:#888;
 font-size:14px;
 }
 
+.perspective-text{
+opacity:1;
+transition:opacity 0.5s ease;
+}
+
 </style>
 
 </head>
@@ -177,14 +182,49 @@ Sometimes clarity appears when the situation is viewed from a different angle.
 
 <div class="lens-box">
 
-<p id="lensText">
+<p id="lensText" class="perspective-text">
 My coworker compliments me privately but challenges my ideas during meetings.
 I feel like they may secretly dislike me.
 </p>
 
 <br>
 
-<button onclick="shiftLens()">Shift the Lens</button>
+function shiftLens(){
+
+<script>
+let perspectives = [
+  "...",
+  "..."
+];
+
+function shiftLens(){
+  let text = document.getElementById("lensText");
+
+  text.style.opacity = 0;
+
+  setTimeout(function(){
+    let random = Math.floor(Math.random() * perspectives.length);
+    text.innerText = perspectives[random];
+    text.style.opacity = 1;
+  }, 500);
+}
+</script>  
+
+let text = document.getElementById("lensText");
+
+text.style.opacity = 0;
+
+setTimeout(function(){
+
+let random = Math.floor(Math.random()*perspectives.length);
+
+text.innerText = perspectives[random];
+
+text.style.opacity = 1;
+
+},500);
+
+}
 
 </div>
 
@@ -200,7 +240,11 @@ I feel like they may secretly dislike me.
 Submit your situation and receive thoughtful, objective insight.
 </p>
 
-<button>Email Your Situation</button>
+<a class="email-btn"
+href="mailto:curioustemptations411@gmail.com?subject=Perspective%20Request"
+target="_blank">
+Email Your Situation
+</a>
 
 </section>
 
