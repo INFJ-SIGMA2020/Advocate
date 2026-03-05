@@ -189,30 +189,7 @@ I feel like they may secretly dislike me.
 
 <br>
 
-function shiftLens(){
-
-<script>
-let perspectives = [
-  "...",
-  "..."
-];
-
-function shiftLens(){
-  let text = document.getElementById("lensText");
-
-  text.style.opacity = 0;
-
-  setTimeout(function(){
-    let random = Math.floor(Math.random() * perspectives.length);
-    text.innerText = perspectives[random];
-    text.style.opacity = 1;
-  }, 500);
-}
-</script>  
-
-let text = document.getElementById("lensText");
-
-text.style.opacity = 0;
+<button onclick="shiftLens()">Shift the Lens</button>  
 
 setTimeout(function(){
 
