@@ -148,6 +148,22 @@ transition:opacity 0.5s ease;
   box-shadow:0 10px 25px rgba(0,0,0,.35);
   transition:all .25s ease;
 }
+input, textarea{
+width:100%;
+max-width:600px;
+padding:14px;
+margin:10px 0;
+border-radius:10px;
+border:none;
+background:#1b1b22;
+color:white;
+font-family:Inter, sans-serif;
+}
+
+textarea{
+height:140px;
+resize:none;
+}  
 </style>
   
 </head>
@@ -222,10 +238,19 @@ offering thoughtful perspective so that you can see the situation more clearly.
 Submit your situation and receive thoughtful, objective insight.
 </p>
 
-<a class="email-btn"
-href="mailto:curioustemptations411@gmail.com?subject=Perspective%20Request">
-Email Your Situation
-</a>
+<form action="https://formspree.io/f/https://formspree.io/f/xeerqver" method="POST">
+
+<input type="text" name="name" placeholder="Your Name (optional)" />
+
+<input type="email" name="email" placeholder="Email if you'd like a response" />
+
+<textarea name="situation" placeholder="Describe the situation you'd like perspective on..." required></textarea>
+
+<br><br>
+
+<button type="submit">Request Perspective</button>
+
+</form>
 
 </section>
 
