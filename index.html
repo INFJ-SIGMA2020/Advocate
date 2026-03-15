@@ -305,7 +305,7 @@ offering thoughtful perspective so that you can see the situation more clearly.
 
     <br>
 
-    <button onclick="shiftLens()">Shift the Lens</button>
+    <button>Shift the Lens</button>
 
   </div>
 
@@ -360,6 +360,10 @@ function chooseUnfold(){
   "Freewill is your given right. The Advocate will always be here if you decide to use a different type of looking glass.";
 
   document.getElementById("continueBtn").style.display = "none";
+
+  setTimeout(() => {
+  closeChoiceModal();
+}, 1500);
 }
 
 function chooseShift(){
