@@ -267,7 +267,13 @@ Your Advocate • Perspective Without Bias
 
 
 <script>
-const form = document.getElementById("perspectiveForm");
+  function scrollToSection(){
+  document.getElementById("contact").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+  const form = document.getElementById("perspectiveForm");
 
 if(form){
   form.addEventListener("submit", async function(e){
