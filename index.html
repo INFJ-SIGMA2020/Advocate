@@ -161,6 +161,7 @@ color:white;
 font-family:Inter, sans-serif;
 }
 
+</div>
 textarea{
 height:140px;
 resize:none;
@@ -170,6 +171,35 @@ resize:none;
 </head>
 
 <body>
+ <div id="choiceModal" class="choice-modal">
+
+  <div class="choice-box">
+
+    <h2>A Moment of Perspective</h2>
+
+    <p class="choice-text">
+      When we attempt to interpret situations from within them, emotion,
+      expectation, and assumption can quietly distort the view.
+
+      Before proceeding, choose how you would like to move forward.
+    </p>
+
+    <div class="choice-buttons">
+      <button onclick="chooseUnfold()">Allow Events to Unfold</button>
+      <button onclick="chooseShift()">Shift the Looking Glass</button>
+    </div>
+
+    <p id="choiceResponse" class="choice-response"></p>
+
+    <button id="continueBtn" class="continue-btn" onclick="scrollToSection()" style="display:none;">
+      Continue
+    </button>
+
+    <button class="close-btn" onclick="closeChoiceModal()">Close</button>
+
+  </div>
+
+</div> 
 
 <section class="hero">
 
@@ -183,7 +213,7 @@ resize:none;
 Perhaps you simply need a different looking glass.
 </p>
 
-<button onclick="scrollToSection()">Request Perspective</button>
+<button onclick="openChoiceModal()">Request Perspective</button>
 
 </div>
 
@@ -261,12 +291,57 @@ Submit your situation and receive thoughtful, objective insight.
 
 Your Advocate • Perspective Without Bias
 
+ <div id="choiceModal" class="choice-modal">
+  <div class="choice-box">
+    <h2>A Moment of Perspective</h2>
+
+    <p class="choice-text">
+      When we attempt to interpret situations from within them, emotion, expectation, and assumption can quietly shape what we believe is happening.
+      Before proceeding, choose how you would like to move forward.
+    </p>
+
+    <div class="choice-buttons">
+      <button onclick="chooseUnfold()">Allow Events to Unfold</button>
+      <button onclick="chooseShift()">Shift the Looking Glass</button>
+    </div>
+
+    <p id="choiceResponse" class="choice-response"></p>
+
+    <button id="continueBtn" class="continue-btn" onclick="scrollToSection()" style="display:none;">
+      Continue
+    </button>
+
+    <button class="close-btn" onclick="closeChoiceModal()">Close</button>
+  </div>
+</div> 
+  
 </footer>
 
 
 
 
 <script>
+  function openChoiceModal(){
+  document.getElementById("choiceModal").style.display = "flex";
+}
+
+function closeChoiceModal(){
+  document.getElementById("choiceModal").style.display = "none";
+}
+
+function chooseUnfold(){
+  document.getElementById("choiceResponse").innerText =
+  "Freewill is your given right. The Advocate will always be here if you decide to use a different type of looking glass.";
+
+  document.getElementById("continueBtn").style.display = "none";
+}
+
+function chooseShift(){
+  document.getElementById("choiceResponse").innerText =
+  "Your drive to see reality for what it truly is makes all the difference. Please explain the situation, your role, what occurred, and what remains unclear. The clearer the description, the quicker clarity can be delivered. — The Advocate";
+
+  document.getElementById("continueBtn").style.display = "inline-block";
+}
   function scrollToSection(){
   document.getElementById("contact").scrollIntoView({
     behavior: "smooth"
