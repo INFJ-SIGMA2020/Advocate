@@ -161,10 +161,60 @@ color:white;
 font-family:Inter, sans-serif;
 }
 
-</div>
 textarea{
 height:140px;
 resize:none;
+}  
+
+.choice-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(6px);
+z-index:999;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.choice-box{
+max-width:760px;
+width:100%;
+background:#121217;
+border:1px solid #d6b36a30;
+border-radius:18px;
+padding:40px 28px;
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.choice-text{
+max-width:640px;
+margin:20px auto 30px;
+line-height:1.8;
+color:#f3f3f3;
+}
+
+.choice-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+justify-content:center;
+margin-bottom:24px;
+}
+
+.choice-response{
+min-height:70px;
+max-width:640px;
+margin:0 auto 20px;
+line-height:1.8;
+color:#e8c97a;
+}
+
+.close-btn{
+background:transparent;
+color:#d6b36a;
+border:1px solid #d6b36a55;
 }  
 </style>
   
@@ -290,30 +340,6 @@ Submit your situation and receive thoughtful, objective insight.
 <footer>
 
 Your Advocate • Perspective Without Bias
-
- <div id="choiceModal" class="choice-modal">
-  <div class="choice-box">
-    <h2>A Moment of Perspective</h2>
-
-    <p class="choice-text">
-      When we attempt to interpret situations from within them, emotion, expectation, and assumption can quietly shape what we believe is happening.
-      Before proceeding, choose how you would like to move forward.
-    </p>
-
-    <div class="choice-buttons">
-      <button onclick="chooseUnfold()">Allow Events to Unfold</button>
-      <button onclick="chooseShift()">Shift the Looking Glass</button>
-    </div>
-
-    <p id="choiceResponse" class="choice-response"></p>
-
-    <button id="continueBtn" class="continue-btn" onclick="scrollToSection()" style="display:none;">
-      Continue
-    </button>
-
-    <button class="close-btn" onclick="closeChoiceModal()">Close</button>
-  </div>
-</div> 
   
 </footer>
 
