@@ -421,12 +421,16 @@ function chooseShift(){
 
   document.getElementById("continueBtn").style.display = "inline-block";
 }
-  function scrollToSection(){
-  document.getElementById("contact").scrollIntoView({
-    behavior: "smooth"
-  });
-}
+  
+function scrollToSection(){
+  closeChoiceModal();
 
+  setTimeout(() => {
+    document.getElementById("contact").scrollIntoView({
+      behavior: "smooth"
+    });
+  }, 100);
+}
   const form = document.getElementById("perspectiveForm");
 
 if(form){
