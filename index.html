@@ -421,7 +421,17 @@ function chooseShift(){
 
   document.getElementById("continueBtn").style.display = "inline-block";
 }
-  
+ 
+function chooseShift(){
+  closeChoiceModal();
+
+  setTimeout(() => {
+    document.getElementById("contact").scrollIntoView({
+      behavior: "smooth"
+    });
+  }, 100);
+}
+} 
 function scrollToSection(){
   closeChoiceModal();
 
