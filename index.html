@@ -415,32 +415,18 @@ function chooseUnfold(){
 }, 1500);
 }
 
-function chooseShift(){
-  document.getElementById("choiceResponse").innerText =
-  "Your drive to see reality for what it truly is makes all the difference. Please explain the situation, your role, what occurred, and what remains unclear. The clearer the description, the quicker clarity can be delivered. — The Advocate";
 
-  document.getElementById("continueBtn").style.display = "inline-block";
+ function chooseShift(){
+  closeChoiceModal();
+
+  setTimeout(() => {
+    document.getElementById("contact").scrollIntoView({
+      behavior: "smooth"
+    });
+  }, 100);
+
 }
  
-function chooseShift(){
-  closeChoiceModal();
-
-  setTimeout(() => {
-    document.getElementById("contact").scrollIntoView({
-      behavior: "smooth"
-    });
-  }, 100);
-}
-} 
-function scrollToSection(){
-  closeChoiceModal();
-
-  setTimeout(() => {
-    document.getElementById("contact").scrollIntoView({
-      behavior: "smooth"
-    });
-  }, 100);
-}
   const form = document.getElementById("perspectiveForm");
 
 if(form){
