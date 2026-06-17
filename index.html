@@ -219,28 +219,50 @@ border:1px solid #d6b36a55;
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
 
-  body{
-    overflow-y:auto;
-  }
-
   .choice-modal{
-    overflow-y:auto;
     align-items:flex-start;
-    padding-top:20px;
+    justify-content:center;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:10px 20px;
   }
 
   .choice-box{
-    margin:20px auto;
-    max-height:none;
+    max-height:80vh;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:24px 22px;
+    margin:10px auto;
   }
 
-  .hero{
-    height:auto;
-    min-height:100vh;
+  .choice-text{
+    margin:10px auto 14px;
+    line-height:1.4;
+  }
+
+  .choice-response{
+    min-height:auto;
+    margin:10px auto 12px;
+    line-height:1.4;
+  }
+
+  .choice-box h2{
+    font-size:24px;
+    margin-bottom:10px;
+  }
+
+  .choice-buttons{
+    margin-bottom:12px;
+  }
+
+  .choice-buttons button,
+  .continue-btn,
+  .close-btn{
+    padding:10px 20px;
+    font-size:14px;
   }
 
 }
-  
 
 
 </style>
